@@ -1,0 +1,856 @@
+{
+  "format": 1,
+  "title": {
+    "en": "DSH Community Market (Chinese)",
+    "zh": "DSH 社区市场（中文）"
+  },
+  "description": {
+    "en": "Chinese localization of the public DSH community market index; machine-readable fields are unchanged from upstream.",
+    "zh": "DSH 社区市场公开索引的中文版；除标题与描述外，其余字段与上游完全一致。"
+  },
+  "plugins": [
+    {
+      "name": "dsh-opencode-go",
+      "description": {
+        "en": "OpenCode Go model provider and settings UI for DeepSeek Harness",
+        "zh": "为 DeepSeek Harness 接入 OpenCode Go 模型，并带设置界面。"
+      },
+      "versions": [
+        {
+          "version": "0.1.15",
+          "publishTimestamp": 1790434050,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.5-rc.1"
+          }
+        }
+      ],
+      "homepage": "https://github.com/Duskriver/dsh-opencode-go#readme",
+      "title": {
+        "en": "dsh-opencode-go",
+        "zh": "OpenCode Go 模型提供方"
+      }
+    },
+    {
+      "name": "dsh-auto-review",
+      "description": {
+        "en": "Second-model AI auto-review for DeepSeek Harness approval requests: a read-only reviewer subagent decides allow/deny on the approval answerer chain, with fail-closed fallback and full session-log audit.",
+        "zh": "用第二个模型自动复核 DSH 的审批请求：只读的复核子代理在审批链上给出允许/拒绝，失败即拒绝，并完整审计会话日志。"
+      },
+      "versions": [
+        {
+          "version": "0.12.17",
+          "publishTimestamp": 1791605216,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+          }
+        }
+      ],
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-auto-review#readme",
+      "title": {
+        "en": "dsh-auto-review",
+        "zh": "AI 自动审批复核"
+      }
+    },
+    {
+      "name": "dsh-vision-router",
+      "description": {
+        "en": "Eyes for text-only DeepSeek Harness agents: built-in free vision chain + pixel-level tools. Remote vision providers, including the default free fallback, receive image content unless strict local-only use is configured.",
+        "zh": "为纯文本 DSH 代理提供内置免费视觉链与像素级工具；除严格本地模式外，图片会发送给远程视觉提供方（默认走免费回退）。"
+      },
+      "versions": [
+        {
+          "version": "3.0.4",
+          "publishTimestamp": 1792167944,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.5-rc.1 <0.2.0-0 || >=0.2.0-rc.2 <0.3.0-0"
+          }
+        }
+      ],
+      "homepage": "https://github.com/ysr666/dsh-vision-router",
+      "title": {
+        "en": "dsh-vision-router",
+        "zh": "视觉路由：给纯文本模型装眼睛"
+      }
+    },
+    {
+      "name": "dsh-permission-rules",
+      "description": {
+        "en": "Declarative Claude Code-style permission rules plus a Codex-style process-level network policy for DeepSeek Harness: ordered allow/deny/ask rules with tool-name, argument (glob/regex), workspace-path, and network-target (domain/ip/port/scheme) matching on",
+        "zh": "Claude Code 风格的声明式权限规则与 Codex 风格的进程级网络策略：按工具名、参数（glob/正则）、工作区路径、网络目标（域名/IP/端口/协议）有序匹配 allow/deny/ask。"
+      },
+      "versions": [
+        {
+          "version": "0.7.15",
+          "publishTimestamp": 1791595989,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+          }
+        }
+      ],
+      "author": "dsh-permission-rules contributors",
+      "homepage": "https://github.com/PerryLink/dsh-permission-rules#readme",
+      "title": {
+        "en": "dsh-permission-rules",
+        "zh": "权限规则 + 网络策略"
+      }
+    },
+    {
+      "name": "dsh-research-report",
+      "description": {
+        "en": "Verifiable research-report engine for DeepSeek Harness: a content-addressed evidence ledger (claim — snapshot binding, tamper-evident) plus versioned sealed reports where every claim carries a verification verdict and the manifest hash seals the directory",
+        "zh": "内容寻址的证据账本（声明与快照绑定、防篡改）加带版本封存报告；每条声明都有验证结论，清单哈希封住整个目录。"
+      },
+      "versions": [
+        {
+          "version": "0.3.22",
+          "publishTimestamp": 1791594283,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.6-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+          }
+        }
+      ],
+      "author": "dsh-research-report contributors",
+      "homepage": "https://github.com/PerryLink/dsh-research-report#readme",
+      "title": {
+        "en": "dsh-research-report",
+        "zh": "可验证研究报告"
+      }
+    },
+    {
+      "name": "dsh-industry-research",
+      "description": {
+        "en": "Industry and company research domain pack for DeepSeek Harness: methodology skills, an industry-chain structure model (industry_map), public-source policy/news tracking over ctx.web (industry_track), company scan cards (company_scan), and auditable resear",
+        "zh": "行业/公司研究领域包：方法论技能、产业链结构模型（industry_map）、公开源政策与新闻跟踪（industry_track）、公司扫描卡（company_scan）与可审计研究流程。"
+      },
+      "versions": [
+        {
+          "version": "0.3.19",
+          "publishTimestamp": 1791594201,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+          }
+        }
+      ],
+      "author": "dsh-industry-research contributors",
+      "homepage": "https://github.com/PerryLink/dsh-industry-research#readme",
+      "title": {
+        "en": "dsh-industry-research",
+        "zh": "行业与公司研究包"
+      }
+    },
+    {
+      "name": "dsh-im-companion",
+      "description": {
+        "en": "dsh-im-companion：以助理和家的概念增强 dsh-im——哪个工作区有助理在管、在不在线尽收眼底，搬家拖一下就行。",
+        "zh": "以「助理」和「家」的概念增强 dsh-im：哪个工作区有助理在管、在不在线一目了然，搬家拖一下即可。"
+      },
+      "versions": [
+        {
+          "version": "0.2.11",
+          "publishTimestamp": 1792133982,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.2-alpha.2 <0.3.0-0"
+          }
+        }
+      ],
+      "homepage": "https://github.com/FeatherHunter/dsh-im-companion",
+      "title": {
+        "en": "dsh-im-companion",
+        "zh": "IM 助理伴侣"
+      }
+    },
+    {
+      "name": "dsh-plugin-bridge",
+      "description": {
+        "en": "Previewable cross-preset session migration for DeepSeek Harness with bounded, fixed-schema handoffs",
+        "zh": "可预览的跨预设会话迁移，交接内容有界、schema 固定。"
+      },
+      "versions": [
+        {
+          "version": "0.4.6",
+          "publishTimestamp": 1792121095,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.0-rc.7 <0.2.0-0 || 0.2.0-rc.2 || 0.2.1-alpha.1 || 0.2.1-alpha.2 || 0.2.1-alpha.3 || 0.2.1-alpha.4"
+          }
+        }
+      ],
+      "homepage": "https://github.com/Totoro-qaq/dsh-plugin-bridge#readme",
+      "title": {
+        "en": "dsh-plugin-bridge",
+        "zh": "跨预设会话迁移"
+      }
+    },
+    {
+      "name": "dsh-undo-savepoint",
+      "description": {
+        "en": "DSH undo/rollback system: snapshot config files on change, undo/redo the last action from the WebUI or by chat, and roll back broken plugin trees without reinstalling. Works even when DSH fails to boot (offline CLI + GUI).",
+        "zh": "DSH 撤销与回滚系统：配置变更即快照，可在 WebUI 或对话里撤销/重做上一步，插件树坏了也能回滚而无需重装；DSH 起不来时同样可用（离线 CLI + GUI）。"
+      },
+      "versions": [
+        {
+          "version": "0.4.10",
+          "publishTimestamp": 1791031697,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.0.1-0 || >=0.1.0-rc.2 || >=0.1.1-rc.1 || >=0.1.2-alpha.2 || >=0.1.2-rc.1 || >=0.1.5-rc.1 || >=0.1.5-rc.2 || >=0.2.0-rc.1"
+          }
+        }
+      ],
+      "homepage": "https://github.com/lire1131/dsh-undo-savepoint",
+      "title": {
+        "en": "dsh-undo-savepoint",
+        "zh": "撤销 / 回滚存档点"
+      }
+    },
+    {
+      "name": "dsh-gitbash-shell",
+      "description": {
+        "en": "Windows 上给 agent 一个真正的 Git Bash 命令工具:私有 Git Bash 执行器实例(官方 PowerShell 执行器原样保留),统一 MSYS 盘根路径方言,官方 pwsh 工具默认隐藏可开关,物化四个内置预设的 Git Bash 变体,侧栏终端接管可开关。· Give agents a real Git Bash tool on Windows: a private Git Bash executor instance (the official PowerShell exe",
+        "zh": "在 Windows 上给代理一个真正的 Git Bash 命令工具：私有 Git Bash 执行器实例（官方 PowerShell 执行器原样保留），统一 MSYS 盘根路径方言，官方 pwsh 工具默认隐藏可开关，物化四个内置预设的 Git Bash 变体，侧栏终端接管可开关。"
+      },
+      "versions": [
+        {
+          "version": "0.40.1",
+          "publishTimestamp": 1792055834,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.7-rc"
+          }
+        }
+      ],
+      "homepage": "https://github.com/KannaKuron/dsh-gitbash-shell",
+      "title": {
+        "en": "dsh-gitbash-shell",
+        "zh": "Windows Git Bash 执行器"
+      }
+    },
+    {
+      "name": "dsh-checkpoint-rewind",
+      "description": {
+        "en": "Unified DSH checkpoints: session + workspace + config three-state snapshots with one-shot rollback — /checkpoint and /rewind commands, a checkpoint tool, automatic interval snapshots, a Settings page timeline with pairwise diffs, and seed-replay session r",
+        "zh": "会话 + 工作区 + 配置三态快照与一键回滚：/checkpoint、/rewind 命令、检查点工具、定时快照、带逐对差异的设置页时间线，以及会话种子重放。"
+      },
+      "versions": [
+        {
+          "version": "0.6.24",
+          "publishTimestamp": 1791593941,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.6-0 <0.2.0 || >=0.2.0-0 <0.3.0"
+          }
+        }
+      ],
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-checkpoint-rewind#readme",
+      "title": {
+        "en": "dsh-checkpoint-rewind",
+        "zh": "统一检查点与回滚"
+      }
+    },
+    {
+      "name": "dsh-fund-research",
+      "description": {
+        "en": "Research plugin for Chinese public mutual funds on DeepSeek Harness: collects fund data from public sources (Tiantian Fund / Eastmoney), computes deterministic metrics (manager profile, holdings penetration, style attribution, performance decomposition), ",
+        "zh": "中国公募基金研究插件：从公开源（天天基金 / 东方财富）采集基金数据，计算确定性指标（经理画像、持仓穿透、风格归因、业绩拆解）。"
+      },
+      "versions": [
+        {
+          "version": "0.4.20",
+          "publishTimestamp": 1791594054,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+          }
+        }
+      ],
+      "author": "dsh-fund-research contributors",
+      "homepage": "https://github.com/PerryLink/dsh-fund-research#readme",
+      "title": {
+        "en": "dsh-fund-research",
+        "zh": "公募基金研究"
+      }
+    },
+    {
+      "name": "@mars-sea/dsh-commandcode-provider",
+      "description": {
+        "en": "Unofficial DeepSeek Harness LLM provider plugin for Command Code, ported from pi-commandcode-provider (MIT). Registers the 'commandcode' provider route with a Models-page card and live model catalog.",
+        "zh": "非官方 Command Code 模型提供方插件（移植自 pi-commandcode-provider，MIT）：注册 commandcode 提供方路由，带模型页卡片与实时模型目录。"
+      },
+      "versions": [
+        {
+          "version": "0.13.4",
+          "publishTimestamp": 1792116350,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": "0.2.0-rc.2 || 0.2.1-alpha.4"
+          }
+        }
+      ],
+      "homepage": "https://github.com/Mars-Sea/dsh-commandcode-provider#readme",
+      "title": {
+        "en": "@mars-sea/dsh-commandcode-provider",
+        "zh": "Command Code 模型提供方"
+      }
+    },
+    {
+      "name": "dsh-plugin-teamflow",
+      "description": {
+        "en": "TeamFlow 团队研发流水线（TypeScript）：需求→PRD→设计→架构→技术方案→并行开发→QA→验收；backlog 持久化 + 断点续跑 + 完成汇报 + 防假交付；Web 团队工作台（conversation.view tab + 拖拽看板）",
+        "zh": "需求→PRD→设计→架构→技术方案→并行开发→QA→验收的团队研发流水线（TypeScript）；backlog 持久化、断点续跑、完成汇报、防假交付，带 Web 团队工作台（会话视图页 + 拖拽看板）。"
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1792174061,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-alpha.2 <0.3.0"
+          }
+        }
+      ],
+      "homepage": "https://github.com/MichaelShii/dsh-plugin-teamflow",
+      "title": {
+        "en": "dsh-plugin-teamflow",
+        "zh": "TeamFlow 团队研发流水线"
+      }
+    },
+    {
+      "name": "dsh-lsp-actions",
+      "description": {
+        "en": "LSP action surface for DeepSeek Harness: diagnostics, formatting, completion, code actions, symbols, signature help, inlay hints, and rename tools over language servers, plus the editor action protocol (lsp.actions.*) that makes the plugin the IDE integra",
+        "zh": "为 DSH 提供 LSP 动作面：诊断、格式化、补全、代码动作、符号、签名帮助、内联提示与重命名，以及让插件成为 IDE 集成点的编辑器动作协议（lsp.actions.*）。"
+      },
+      "versions": [
+        {
+          "version": "0.5.12",
+          "publishTimestamp": 1791594035,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0-0 || >=0.2.1-0 <0.3.0-0"
+          }
+        }
+      ],
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-lsp-actions#readme",
+      "title": {
+        "en": "dsh-lsp-actions",
+        "zh": "LSP 动作集"
+      }
+    },
+    {
+      "name": "dsh-session-sync",
+      "description": {
+        "en": "Cross-device sync for DeepSeek Harness sessions: a dedicated git mirror of the session store, append-only three-way merge with keep-both + fork conflict resolution, /sync command, sync_pull/sync_push/sync_status tools, and configurable auto push/pull",
+        "zh": "会话库的专用 git 镜像，追加式三方合并（保留双方 + 分叉冲突解决），带 /sync 命令、sync_pull/sync_push/sync_status 工具与可配置的自动推拉。"
+      },
+      "versions": [
+        {
+          "version": "0.2.24",
+          "publishTimestamp": 1791594644,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+          }
+        }
+      ],
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-session-sync#readme",
+      "title": {
+        "en": "dsh-session-sync",
+        "zh": "会话跨设备同步"
+      }
+    },
+    {
+      "name": "dsh-xdpool",
+      "description": {
+        "en": "One DSH model pool for every free quota you have: merge all locally signed-in WorkBuddy accounts with auto-failover, sign in to 13 vendors by QR/web, aggregate 76 vendors' free tiers, plus a usage dashboard, model routing, a local OpenAI-compatible gatewa",
+        "zh": "把所有免费额度合成一个 DSH 模型池：本地已登录的 WorkBuddy 账号自动故障转移、13 家厂商扫码/网页登录、聚合 76 家厂商免费额度，另有用量面板、模型路由与本地 OpenAI 兼容网关。"
+      },
+      "versions": [
+        {
+          "version": "2.2.1",
+          "publishTimestamp": 1792124328,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.5-rc.1 <0.3.0"
+          }
+        }
+      ],
+      "author": "XDTrees",
+      "homepage": "https://github.com/XDTrees/dsh-xdpool#readme",
+      "title": {
+        "en": "dsh-xdpool",
+        "zh": "模型额度池"
+      }
+    },
+    {
+      "name": "@xiaoyuyu6420/dsh-backup",
+      "description": {
+        "en": "一条命令备份、恢复与迁移 DeepSeek Harness（dsh）的全部数据（~/.dsh：会话、设置、插件、MCP、技能）：定时自动备份、升级前快照、换机迁移、会话日志体检修复、宿主起不来也能用的进程外救援；凭据默认脱敏只存本机。 Backup, restore & migrate all DeepSeek Harness (~/.dsh) data — sessions, settings, plugins, MCP, skills: scheduled backups, pre-upgrade s",
+        "zh": "一条命令备份、恢复与迁移 DSH 全部数据（~/.dsh：会话、设置、插件、MCP、技能）：定时自动备份、升级前快照、换机迁移、会话日志体检修复、宿主起不来也能进程外救援；凭据默认脱敏只存本机。"
+      },
+      "versions": [
+        {
+          "version": "0.13.4",
+          "publishTimestamp": 1791593785,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": "^0.1.1-rc.2 || ^0.1.2-rc.1 || ^0.1.5-rc.1 || ^0.1.6-alpha.1 || ^0.1.7-alpha.1 || ^0.2.0-rc.1"
+          }
+        }
+      ],
+      "homepage": "https://github.com/xiaoyuyu6420/dsh-backup#readme",
+      "title": {
+        "en": "@xiaoyuyu6420/dsh-backup",
+        "zh": "DSH 全量备份 / 迁移"
+      }
+    },
+    {
+      "name": "dsh-qoder-connect",
+      "description": {
+        "en": "将 Qoder（国内版 / 国际版）的模型接入 DeepSeek Harness — bring Qoder (CN & international) models into DeepSeek Harness.",
+        "zh": "把 Qoder（国内版 / 国际版）的模型接入 DeepSeek Harness。"
+      },
+      "versions": [
+        {
+          "version": "0.2.5",
+          "publishTimestamp": 1792154061,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.7-rc.1"
+          }
+        }
+      ],
+      "author": "corrinehu",
+      "homepage": "https://github.com/masknull/dsh-qoder-connect#readme",
+      "title": {
+        "en": "dsh-qoder-connect",
+        "zh": "Qoder 模型接入"
+      }
+    },
+    {
+      "name": "dsh-md-notes",
+      "description": {
+        "en": "A note-taking plugin for DeepSeek Harness (DSH). It provides a full MD notes manager and MD notes editor, letting you quickly capture conversation content into notes. Notes can be maintained by syncing to a Git repository.",
+        "zh": "Markdown 笔记管理器与编辑器：把对话内容快速存成笔记，并可同步到 Git 仓库维护。"
+      },
+      "versions": [
+        {
+          "version": "0.13.0",
+          "publishTimestamp": 1789064502,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.5-rc.2 <0.1.6"
+          }
+        }
+      ],
+      "homepage": "https://github.com/XieZongChen/dsh-md-notes",
+      "title": {
+        "en": "dsh-md-notes",
+        "zh": "Markdown 笔记"
+      }
+    },
+    {
+      "name": "dsh-output-styles",
+      "description": {
+        "en": "Claude Code outputStyles-equivalent runtime output-style switching for DeepSeek Harness",
+        "zh": "等价于 Claude Code outputStyles 的运行时输出风格切换。"
+      },
+      "versions": [
+        {
+          "version": "0.6.26",
+          "publishTimestamp": 1791594110,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+          }
+        }
+      ],
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-output-styles#readme",
+      "title": {
+        "en": "dsh-output-styles",
+        "zh": "输出风格切换"
+      }
+    },
+    {
+      "name": "dsh-translate",
+      "description": {
+        "en": "Vendor parameter translation and deterministic JSON repair for DeepSeek Harness: the /translate command maps temperature/top_p/max_tokens/stop/system across 11 vendors, and the tools/post-execute repair layer (plus the fix_json tool) fixes broken JSON too",
+        "zh": "厂商参数翻译加确定性 JSON 修复：/translate 命令在 11 家厂商间映射 temperature/top_p/max_tokens/stop/system；tools/post-execute 修复层（含 fix_json 工具）修好坏 JSON。"
+      },
+      "versions": [
+        {
+          "version": "0.2.21",
+          "publishTimestamp": 1791594345,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+          }
+        }
+      ],
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-translate#readme",
+      "title": {
+        "en": "dsh-translate",
+        "zh": "参数翻译与 JSON 修复"
+      }
+    },
+    {
+      "name": "dsh-zotero",
+      "description": {
+        "en": "Let agents search, read, and cite your local Zotero library: find papers, browse notes and annotations, pull evidence by question, open the source document, generate citations.",
+        "zh": "让代理搜索、阅读并引用本地 Zotero 库：找论文、看笔记与批注、按问题取证据、打开原文、生成引用。"
+      },
+      "versions": [
+        {
+          "version": "0.12.1",
+          "publishTimestamp": 1790883369,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2"
+          }
+        }
+      ],
+      "author": "Wenjie Xu",
+      "homepage": "https://github.com/Vncntvx/dsh-zotero#readme",
+      "title": {
+        "en": "dsh-zotero",
+        "zh": "Zotero 文献助手"
+      }
+    },
+    {
+      "name": "dsh-mattpocock-skills-deck",
+      "description": {
+        "en": "安装即自带mattpocock/skills v1.3.1的27个工程与效率技能，无需手动装技能。400亿token打造本插件，在原始技能之上提供10倍的开发效率，也能帮助新手更快上手该技能套件。全力支持GitHub issue；Markdown为预览版；GitLab暂不支持。感谢您的使用和支持💗",
+        "zh": "安装即自带 mattpocock/skills v1.3.1 的 27 个工程与效率技能，无需手动安装。"
+      },
+      "versions": [
+        {
+          "version": "1.8.0-rc.7",
+          "publishTimestamp": 1791696771,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2"
+          }
+        }
+      ],
+      "homepage": "https://github.com/FeatherHunter/dsh-mattpocock-skills-deck",
+      "title": {
+        "en": "dsh-mattpocock-skills-deck",
+        "zh": "mattpocock 技能包"
+      }
+    },
+    {
+      "name": "dsh-agent-message",
+      "description": {
+        "en": "跨会话 Agent 通信：让 DeepSeek Harness 里不同的 Agent 会话互相收发消息。",
+        "zh": "让 DSH 里不同的 Agent 会话互相收发消息。"
+      },
+      "versions": [
+        {
+          "version": "1.6.0",
+          "publishTimestamp": 1788136072,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.1-rc.2 <0.2.0"
+          }
+        }
+      ],
+      "homepage": "https://github.com/GengDaPeng/dsh-agent-message#readme",
+      "title": {
+        "en": "dsh-agent-message",
+        "zh": "跨会话 Agent 通信"
+      }
+    },
+    {
+      "name": "dsh-library",
+      "description": {
+        "en": "Local document knowledge base for DeepSeek Harness: library_add/remove/list, hybrid semantic+keyword library_search with diversity re-ranking, relevance filtering and lost-in-the-middle avoidance, citation-aware injection, library_cite_check and library_d",
+        "zh": "本地文档知识库：library_add/remove/list、语义 + 关键词混合检索（多样性重排、相关度过滤、避免中段丢失）、引用感知注入与引用校验。"
+      },
+      "versions": [
+        {
+          "version": "0.2.20",
+          "publishTimestamp": 1791594250,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+          }
+        }
+      ],
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-library#readme",
+      "title": {
+        "en": "dsh-library",
+        "zh": "本地文档知识库"
+      }
+    },
+    {
+      "name": "memory-eternal",
+      "description": {
+        "en": "记忆核心（Memory Eternal）：自研的 DeepSeek Harness 记忆插件，不移植任何既有记忆框架——对话结束后自动沉淀知识卡到本地 Markdown Vault（自研去重、自研 CJK 检索、可 git 管理），设置页提供图形化知识库（统计 / 搜索 / 知识图谱 + 侧边栏一键弹窗），Agent 通过 memory_recall 工具按需召回历史上下文。零人工干预。",
+        "zh": "自研 DSH 记忆插件：对话结束后自动沉淀知识卡到本地 Markdown Vault（自研去重、CJK 检索、可 git 管理），设置页提供图形化知识库（统计 / 搜索 / 知识图谱 + 侧栏弹窗），代理通过 memory_recall 按需召回。"
+      },
+      "versions": [
+        {
+          "version": "0.10.36",
+          "publishTimestamp": 1792139895,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.5-alpha.2 <0.3.0-0"
+          }
+        }
+      ],
+      "author": "EternalNight996",
+      "homepage": "https://github.com/EternalNight996/memory-eternal",
+      "title": {
+        "en": "memory-eternal",
+        "zh": "记忆核心 Memory Eternal"
+      }
+    },
+    {
+      "name": "dsh-memento",
+      "description": {
+        "en": "Bounded, layered, approval-gated, auditable cross-session memory for DeepSeek Harness — a capability seam (ctx.memory service + local SQLite provider + memory tool + frozen snapshot injection), not another memory warehouse",
+        "zh": "有界、分层、审批门控、可审计的跨会话记忆：ctx.memory 服务 + 本地 SQLite 提供方 + memory 工具 + 冻结快照注入。"
+      },
+      "versions": [
+        {
+          "version": "0.5.25",
+          "publishTimestamp": 1791818381,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+          }
+        }
+      ],
+      "homepage": "https://github.com/PerryLink/dsh-memento#readme",
+      "title": {
+        "en": "dsh-memento",
+        "zh": "分层跨会话记忆"
+      }
+    },
+    {
+      "name": "dsh-vision-proxy",
+      "description": {
+        "en": "DeepSeek brain + automatic image transcription for DeepSeek Harness: a deepseek-vision provider route that transcribes attached images to text before delegating to the text-only DeepSeek adapter. Official deepseek-v4-flash-vision-exp by default (a pure-te",
+        "zh": "DeepSeek 大脑加自动图片转写：deepseek-vision 提供方路由先把附件图片转成文本，再交给纯文本适配器；默认使用官方 deepseek-v4-flash-vision-exp。"
+      },
+      "versions": [
+        {
+          "version": "0.4.1",
+          "publishTimestamp": 1787413781,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.0-rc.6"
+          }
+        }
+      ],
+      "author": "Flyvhidbwo",
+      "homepage": "https://github.com/Flyvhidbwo/dsh-vision-proxy#readme",
+      "title": {
+        "en": "dsh-vision-proxy",
+        "zh": "视觉代理：图片先转文字"
+      }
+    },
+    {
+      "name": "dsh-mcp-panel",
+      "description": {
+        "en": "MCP management console for the official DeepSeek Harness MCP client: /mcp command with health diagnostics and pipeline trial calls, a Settings MCP tab with server CRUD (append-only profile-patch fragments, approval-gated writes with automatic backups), a ",
+        "zh": "官方 MCP 客户端的控制台：/mcp 命令（健康诊断、管线试调），设置里的 MCP 标签页可增删改服务器（追加式 profile patch 片段、审批门控写入并自动备份）。"
+      },
+      "versions": [
+        {
+          "version": "0.6.24",
+          "publishTimestamp": 1791610549,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+          }
+        }
+      ],
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-mcp-panel#readme",
+      "title": {
+        "en": "dsh-mcp-panel",
+        "zh": "MCP 管理台"
+      }
+    },
+    {
+      "name": "dsh-pdf-mineru",
+      "description": {
+        "en": "Provider-independent DSH document parsing powered by MinerU, with native background jobs, immutable results, and safe request coalescing.",
+        "zh": "基于 MinerU 的、与提供方无关的 DSH 文档解析：原生后台任务、不可变结果、安全的请求合并。"
+      },
+      "versions": [
+        {
+          "version": "0.2.0",
+          "publishTimestamp": 1791123072,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2"
+          }
+        }
+      ],
+      "homepage": "https://github.com/Yurzi/dsh-pdf-mineru#readme",
+      "title": {
+        "en": "dsh-pdf-mineru",
+        "zh": "MinerU 文档解析"
+      }
+    },
+    {
+      "name": "@yangdcm/dsh-expert-team",
+      "description": {
+        "en": "dsh「专家团」bundle：一句自然语言组建角色化多智能体「数字员工」团队，按九阶段门控流水线协作交付，实现者直接改代码并产出持久工件；带 live 团队浮层。 · Role-based multi-agent expert team for DeepSeek Harness: one sentence in, a staged and gated team delivery out.",
+        "zh": "一句自然语言组建角色化多智能体「数字员工」团队，按九阶段门控流水线协作交付，实现者直接改代码并产出持久工件；带实时团队浮层。"
+      },
+      "versions": [
+        {
+          "version": "1.5.3",
+          "publishTimestamp": 1790501028,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.5-rc.1"
+          }
+        }
+      ],
+      "homepage": "https://github.com/yangdcm/dsh-expert-team#readme",
+      "title": {
+        "en": "@yangdcm/dsh-expert-team",
+        "zh": "专家团：多智能体团队"
+      }
+    },
+    {
+      "name": "dsh-doublecheck",
+      "description": {
+        "en": "Delivery quality gate for DeepSeek Harness: grill the requirements, test the implementation, prove the delivery, and gate the handoff with a deliverable/rework decision.",
+        "zh": "交付质量门禁：拷问需求、测试实现、证明交付，用「可交付 / 返工」决策把住交接。"
+      },
+      "versions": [
+        {
+          "version": "0.9.24",
+          "publishTimestamp": 1791594043,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.6-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+          }
+        }
+      ],
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-doublecheck#readme",
+      "title": {
+        "en": "dsh-doublecheck",
+        "zh": "交付质量门禁"
+      }
+    }
+  ]
+}

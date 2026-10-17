@@ -16,6 +16,7 @@ import { readFile, writeFile } from 'node:fs/promises'
 const UPSTREAM = 'https://raw.githubusercontent.com/bruc3van/awesome-dsh-plugin/main/data'
 const REG = 'https://registry.npmjs.org/'
 const CONCURRENCY = 20
+const MAX_VERSIONS = 10
 
 // Chinese labels for the 33 curated entries that previously shipped translated text.
 const ZH = {
@@ -167,6 +168,8 @@ async function fetchBundle(name) {
   }
   if (!qualifying.length) return undefined
   qualifying.sort((a, b) => b.publishTimestamp - a.publishTimestamp)
+  // The host fetch timeout is 15 s: keep the index small and list recent versions only.
+  qualifying.splice(MAX_VERSIONS)
   const latest = versions[qualifying[0].version] ?? {}
   const repo = latest.repository
   const repository = typeof repo === 'string'
@@ -232,6 +235,13 @@ for (const entry of upstream.plugins) {
   byName.delete(entry.name)
 }
 for (const entry of byName.values()) merged.push(entry)
+
+// The host fetch timeout is 15 s: keep every plugin's recent versions only.
+for (const entry of merged) {
+  entry.versions = [...entry.versions]
+    .sort((a, b) => b.publishTimestamp - a.publishTimestamp)
+    .slice(0, MAX_VERSIONS)
+}
 
 // Categories and Chinese text.
 const overrides = curated.category_overrides ?? {}
